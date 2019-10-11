@@ -1,0 +1,42 @@
+﻿@model DenunciasASP.Models.ObjetoUtilizado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ObjetoUtilizado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.denuncia.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.denuncia.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUtilizado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUtilizado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadUtilizado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadUtilizado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

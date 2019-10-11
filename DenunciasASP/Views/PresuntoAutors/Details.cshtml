@@ -1,0 +1,106 @@
+﻿@model DenunciasASP.Models.PresuntoAutor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PresuntoAutor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorCabello.NombreColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorCabello.NombreColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorPiel.NombreColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorPiel.NombreColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contextura.NombreContextura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contextura.NombreContextura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.denuncia.Sintesis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.denuncia.Sintesis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo.NombreSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAutor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreAutor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstaturaAprox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstaturaAprox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tatuajes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tatuajes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cicatrices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cicatrices)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

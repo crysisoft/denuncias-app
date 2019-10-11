@@ -1,0 +1,112 @@
+﻿@model DenunciasASP.Models.PresuntoAutor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PresuntoAutor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorCabello.NombreColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorCabello.NombreColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorPiel.NombreColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorPiel.NombreColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contextura.NombreContextura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contextura.NombreContextura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.denuncia.Sintesis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.denuncia.Sintesis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo.NombreSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAutor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreAutor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstaturaAprox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstaturaAprox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tatuajes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tatuajes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cicatrices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cicatrices)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

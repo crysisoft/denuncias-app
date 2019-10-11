@@ -1,0 +1,98 @@
+﻿@model DenunciasASP.Models.Denuncia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Denuncia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado.NombreEstado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Localidad.NombreLocalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Localidad.NombreLocalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LugarAfectado.NombreTipoLugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LugarAfectado.NombreTipoLugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDelito.NombreTipoDelito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDelito.NombreTipoDelito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoraOcurrido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoraOcurrido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sintesis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sintesis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuantosMasculino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuantosMasculino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuantosFemenino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuantosFemenino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CuantosDesconocidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuantosDesconocidos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

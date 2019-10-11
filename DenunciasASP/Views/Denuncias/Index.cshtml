@@ -1,0 +1,87 @@
+﻿@model IEnumerable<DenunciasASP.Models.Denuncia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Localidad.NombreLocalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LugarAfectado.NombreTipoLugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDelito.NombreTipoDelito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaHoraOcurrido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sintesis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuantosMasculino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuantosFemenino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuantosDesconocidos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Localidad.NombreLocalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LugarAfectado.NombreTipoLugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDelito.NombreTipoDelito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaHoraOcurrido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sintesis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuantosMasculino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuantosFemenino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuantosDesconocidos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<DenunciasASP.Models.PresuntoAutor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de presuntos autores</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ColorCabello.NombreColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColorPiel.NombreColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contextura.NombreContextura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.denuncia.Sintesis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo.NombreSexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAutor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstaturaAprox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tatuajes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cicatrices)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColorCabello.NombreColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColorPiel.NombreColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contextura.NombreContextura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.denuncia.Sintesis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo.NombreSexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstaturaAprox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tatuajes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cicatrices)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
